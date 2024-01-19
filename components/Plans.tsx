@@ -7,7 +7,7 @@ import useAuth from '../hooks/useAuth'
 import { loadCheckout } from '../lib/stripe'
 import Loader from './Loader'
 import Table from './Table'
-
+import netflex from "../public/netflex.svg";
 interface Props {
   products: Product[]
 }
@@ -34,7 +34,7 @@ function Plans({ products }: Props) {
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
           <img
-            src="https://rb.gy/ulxxee"
+            src={netflex.src}
             alt="Netflix"
             width={150}
             height={90}

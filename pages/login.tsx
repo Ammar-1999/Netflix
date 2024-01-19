@@ -3,7 +3,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import useAuth from '../hooks/useAuth'
-
+import netflex from "../public/netflex.svg";
+import backGround from "../public/backGround.jpg";
 interface Inputs {
   email: string
   password: string
@@ -34,14 +35,14 @@ function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src="https://rb.gy/p2hphi"
+        src={backGround.src}
         layout="fill"
         className="-z-10 !hidden opacity-60 sm:!inline"
         objectFit="cover"
       />
 
       <img
-        src="https://rb.gy/ulxxee"
+        src={netflex.src}
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
         width={150}
         height={150}

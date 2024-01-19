@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import useAuth from '../hooks/useAuth'
 import BasicMenu from './BasicMenu'
-
+import netflex from "../public/netflex.svg";
+import userImg from "../public/g1pwyx.png";
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { logout } = useAuth()
@@ -28,7 +29,7 @@ function Header() {
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
         <img
-          src="https://rb.gy/ulxxee"
+          src={netflex.src}
           width={100}
           height={100}
           className="cursor-pointer object-contain"
@@ -51,7 +52,7 @@ function Header() {
         <BellIcon className="h-6 w-6" />
         <Link href="/account">
           <img
-            src="https://rb.gy/g1pwyx"
+            src={userImg.src}
             alt=""
             className="cursor-pointer rounded"
           />
